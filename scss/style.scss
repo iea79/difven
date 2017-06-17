@@ -1411,7 +1411,7 @@ section {
 		float: left;
 	}
 	&__info {
-		padding: 70px 95px 140px 82px;
+		padding: 70px 95px 70px 82px;
 		overflow: hidden;
 		@extend %clear_a;
 	}
@@ -1427,9 +1427,6 @@ section {
 		letter-spacing: 3px;
 	}
 	&__control {
-		position: absolute;
-		bottom: 67px;
-		right: 80px;
 		z-index: 10;
 		width: 200px;
 		height: 60px;
@@ -1438,35 +1435,50 @@ section {
 		text-align: center;
 		border: 2px solid #fff;
 		@include border-radius(3px 2px 2px 3px);
+		position: absolute;
+		bottom: 80px;
+		right: 70px;
 		.bold {font-weight: 700;}
 		.small {font-size: 18px;}
 		.dark {opacity: 0.5;}
+	}
+	&__prev,
+	&__next {
+		top: 50%;
+		margin-top: -5px;
+		width: 12px;
+		height: 10px;
+		display: block;
+		cursor: pointer;
+		position: absolute;
+	}
+	&__prev {
+		background: transparent url('../img/icons/arrow_prev.png') no-repeat;
+		left: 15px;
+	}
+	&__next {
+		right: 15px;
+		background: transparent url('../img/icons/arrow_next.png') no-repeat;
+	}
+	&__wrap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (max-width: 1200px) and (min-width: 961px) {
+		&__info {
+			padding-bottom: 150px;
+		}
+		&__control {
+			bottom: 50px;
+		}
 	}
 }
 
 @import "slick";
 
-.bslider__wrap {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	.slick-prev,
-	.slick-next {
-		bottom: 92px;
-		width: 12px;
-		height: 10px;
-	}
-	.slick-prev {
-		right: 248px;
-		background: transparent url('../img/icons/arrow_prev.png') no-repeat;
-	}
-	.slick-next {
-		right: 100px;
-		background: transparent url('../img/icons/arrow_next.png') no-repeat;
-	}
-}
 
 .slick-arrow {
 	font-size: 0;

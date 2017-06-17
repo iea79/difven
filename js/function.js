@@ -55,16 +55,10 @@ $(document).ready(function() {
 		arrows: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+        prevArrow: '.bslider__prev',
+        nextArrow: '.bslider__next'
 	});
-
-    $('.bslider__wrap').on('beforeChange', function(){
-        $('.bslider .slick-arrow').hide();
-    });
-
-    $('.bslider__wrap').on('afterChange', function(){
-        $('.bslider .slick-arrow').show();
-    });
 
 	$('.o-slider__wrap').slick({
         infinite: true,
