@@ -2652,9 +2652,13 @@ section {
 	color: #fff;
 	@include trs(.5s);
 	border: 20px solid #666666;
+	height: 0;
+	overflow: hidden;
+	z-index: 0;
 	&.open {
 		margin-top: 0;
 		opacity: 1;
+		z-index: 100;
 		// display: block;
 	}
 	.container_center {
