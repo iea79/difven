@@ -604,7 +604,6 @@ section {
 			margin-left: 40px;
 		}
 		.menu__btn {
-			display: none;
 			width: 38px;
 			height: 24px;
 			margin-left: 43px;
@@ -626,11 +625,23 @@ section {
 			-webkit-align-self: flex-end;
 			flex-direction: column;
 			-webkit-flex-direction: column;
-			.tel {text-align: center;}
+			.tel {
+				text-align: center;
+				order: 3;
+				-webkit-order: 3;
+			}
 			.application__btn {
 				margin-left: 0;
 				margin-bottom: 10px;
-				order: -1;
+				order: 2;
+				-webkit-order: 2;
+			}
+			.menu__btn {
+				order: 1;
+				-webkit-order: 1;
+				align-self: flex-end;
+				-webkit-align-self: flex-end;
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -651,12 +662,22 @@ section {
 			-webkit-align-self: center;
 			flex-direction: row;
 			-webkit-flex-direction: row;
+			.tel {
+				text-align: center;
+				order: 1;
+				-webkit-order: 1;
+			}
 			.application__btn {
 				margin-left: 43px;
-				order: 0;
+				order: 2;
+				-webkit-order: 2;
+			}
+			.menu__btn {
+				position: absolute;
+				right: 27px;
+				top: 39px;
 			}
 		}
-		.menu__btn {display: block;}
 	}
 }
 @media (max-width: 800px) {
@@ -2838,10 +2859,11 @@ section {
 .modal_form {
 	.modal-dialog {
 		margin-top: 25px;
-	}
-	.modal-content {
 		max-width: 484px;
 		margin: auto;
+	}
+	.modal-content {
+		margin-top: 20px;
 	}
 	.modal-header {
 		font-size: 19px;
@@ -2930,12 +2952,14 @@ section {
 			display: block;
 		}
 	}
-	.modal-dialog {}
-	.modal-content {
+	.modal-dialog {
 		max-width: 1285px;
 		margin: auto;
+	}
+	.modal-content {
 		overflow: hidden;
 		font-size: 16px;
+		margin-top: 15px;
 	}
 	.modal-close {}
 	.modal-header {
