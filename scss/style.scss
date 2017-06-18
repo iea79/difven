@@ -261,7 +261,8 @@ h3 {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 0 -220px 0; // отрицательный нижний отступ на высоту футера
+    margin: 0 0 -220px 0;
+    overflow: hidden;
 }
 
 .container_center {
@@ -740,7 +741,7 @@ section {
 	position: relative;
 	z-index: 1;
 	// padding: 70px 30px 40px;
-	padding: 234px 30px 40px;
+	padding: 9% 30px 40px;
 	background: transparent url('../img/header_bg.jpg') no-repeat center center;
 	background-size: cover;
 	@extend %clear_a;
@@ -782,11 +783,11 @@ section {
 .advantage__l {
 	width: 970px;
 	margin-top: 5px;
-	margin-bottom: 125px;
+	margin-bottom: 7%;
 	@extend %clear_a;
 	&i {
 		position: relative;
-		margin-top: 62px;
+		margin-top: 6%;
 		padding-left: 23px;
 		float: left;
 		color: #ffffff;
@@ -832,9 +833,6 @@ section {
 			font: 700 16px/24px $main_font_family;
 		}
 	}
-}
-@media (max-width: 970px) {
-	.advantage__l {width: 800px;}
 }
 @media (max-width: 900px) {
 	.first__screen__content {
@@ -899,8 +897,6 @@ section {
 			font: 12px/18px 'Intro', 'IntroRegular';
 		}
 	}
-}
-@media (max-width: 500px) {
 }
 @media (max-width: 450px) {
 	.first__screen {
@@ -1256,51 +1252,6 @@ section {
 }
 
 // Скроллер
-
-// .baron__scroller {
-// 	position: relative;
-// }
-// .baron._simple .baron__track {
-//     // opacity: 0;
-//     position: absolute;
-//     z-index: 10;
-//     top: 10px;
-//     bottom: 10px;
-//     right: 0;
-//     width: 10px;
-//     height: 660px;
-//     border-radius: 4px;
-//     // background: #ddf;
-//     // background: rgba(0, 0, 255, .1);
-//     background-color: #22b573;
-//     pointer-events: none;
-// }
-// .baron._simple .baron__free {
-// 	width: 10px;
-// 	height: 336px;
-// 	background-color: #22b573;
-// }
-// .baron._simple._scrollbar .baron__track {
-// 	// opacity: 1;
-// }
-// .baron._simple .baron__bar {
-//     position: absolute;
-//     z-index: 1;
-//     width: 10px;
-//     border-radius: 3px;
-//     background: #22b573;
-//     opacity: 0;
-//     -webkit-transition: opacity .2s linear;
-//     transition: opacity .2s linear;
-//     pointer-events: auto;
-// }
-// .baron._simple .baron__bar:hover {
-//     opacity: .8;
-// }
-// .baron._simple.baron .baron__bar {
-//     opacity: .6;
-//  }
-
 .conditions__types {
 	.baron__root {
 		position: relative;
@@ -2053,6 +2004,23 @@ section {
 	}
 }
 
+
+@media (max-width: 1279px) {
+	.a-slider {
+		&__img {
+			width: 41%;
+		}
+		&__advantage {
+			padding: 33px 30px 60px 22%;
+			width: 80%;
+		}
+		&__control {
+			right: 40px;
+			bottom: 40px;
+		}
+	}
+}
+
 @media (max-width: 991px) {
 	.a-slider {
 		height: auto;
@@ -2102,8 +2070,7 @@ section {
 	z-index: 1;
 	background: image-url('sert_bg.png') no-repeat right center #22b573;
 	&__list {
-		width: 1120px;
-		height: 520px;
+		max-width: 1120px;
 		margin-top: 77px;
 		margin-left: -15px;
 		margin-right: auto;
@@ -2127,7 +2094,7 @@ section {
 		display: block;
 		z-index: 1;
 		border-radius: 3px;
-		margin-bottom: 15px;
+		margin-bottom: 14px;
 		&:hover:before {
 			content: '';
 			position: absolute;
@@ -2158,8 +2125,8 @@ section {
 @media (max-width: 1279px) {
 	.certificates {
 		&__list {
-			width: 100%;
-			height: auto;
+			// width: 100%;
+			// height: auto;
 		}
 	}
 }

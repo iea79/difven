@@ -17,13 +17,13 @@ $(document).ready(function() {
 	});
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false                     ;
-	// });
+	$('.first__screen a[href^="#"]').click( function(){ 
+		var scroll_el = $(this).attr('href'); 
+		if ($(scroll_el).length != 0) {
+		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+		}
+		return false                     ;
+	});
 
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
     // $(document).ready(function(){
@@ -125,6 +125,16 @@ $(document).ready(function() {
     });
 
     $('input[type=tel]').inputmask("+7 ( 999 ) 999 - 99 - 99");
+        
+    $('a.certificates__link').fancybox({
+        'transitionIn'  :   'elastic',
+        'transitionOut' :   'elastic',
+        'padding'       :   0,
+        'speedIn'       :   600, 
+        'speedOut'      :   200, 
+        'overlayShow'   :   false
+    });
+
 
     baron({
         root: '.baron',
