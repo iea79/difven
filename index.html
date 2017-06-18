@@ -45,7 +45,7 @@
 		</div>
 		<div class="header__top__right">
 			<a href="tel:+73432011715" class="tel">+7 (343) 201-17-15</a>
-			<button class="application__btn btn">ОСТАВИТЬ ЗАЯВКУ</button>
+			<button class="application__btn btn" data-toggle="modal" data-target="#modal_form">ОСТАВИТЬ ЗАЯВКУ</button>
 			<button class="menu__btn btn"></button>
 		</div>
 	</header>
@@ -481,22 +481,22 @@
 							<li class="services__li">
 								<img src="img/services__img1.jpg" alt="Мы предоставляем услуги" class="services__img">
 								<div class="p">Проектирование систем кондиционирования</div>
-								<a href="#" class="more">Подробнее<span>&gt;</span></a>
+								<a href="#" class="more" data-toggle="modal" data-target="#modal__service">Подробнее<span>&gt;</span></a>
 							</li>
 							<li class="services__li">
 								<img src="img/services__img2.jpg" alt="Мы предоставляем услуги" class="services__img">
 								<div class="p">Монтаж систем кондиционирования</div>
-								<a href="#" class="more">Подробнее<span>&gt;</span></a>
+								<a href="#" class="more" data-toggle="modal" data-target="#modal__service">Подробнее<span>&gt;</span></a>
 							</li>
 							<li class="services__li">
 								<img src="img/services__img3.jpg" alt="Мы предоставляем услуги" class="services__img">
 								<div class="p">Продажа систем кондиционирования</div>
-								<a href="#" class="more">Подробнее<span>&gt;</span></a>
+								<a href="#" class="more" data-toggle="modal" data-target="#modal__service">Подробнее<span>&gt;</span></a>
 							</li>
 							<li class="services__li">
 								<img src="img/services__img4.jpg" alt="Мы предоставляем услуги" class="services__img">
 								<div class="p">Сервисное обслуживание систем кондиционирования</div>
-								<a href="#" class="more">Подробнее<span>&gt;</span></a>
+								<a href="#" class="more" data-toggle="modal" data-target="#modal__service">Подробнее<span>&gt;</span></a>
 							</li>
 						</ul>
 					</div>
@@ -896,28 +896,78 @@
 </footer>
 <!-- end footer -->
 
-<!-- Button trigger modal modal_form -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal_form">
-        Посмотреть демо
-      </button>
-
 <!-- begin Modal modal_form -->
 <div class="modal fade modal_form" id="modal_form">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<a href="#" class="modal-close" data-dismiss="modal"></a>
 			<div class="modal-header">
-				<div class="modal-title" id="myModalLabel">Название модали</div>
+				<div class="modal-title">Оставить заявку</div>
 			</div>
 			<div class="modal-body">
-				
-			</div>
-			<div class="modal-footer">
+				<form action="#" class="forms__application">
+					<div class="forms__div">
+						<label for="7" class="forms__label">Введите ваше имя:</label>
+						<input id="7" type="text" placeholder="Иванов Иван Иванович">
+					</div>
+					<div class="forms__div">
+						<label for="8" class="forms__label">Введите ваш номер</label>
+						<input id="8" type="tel" placeholder="+7 ( ___ ) ___ - __ - __">
+					</div>
+					<div class="forms__div">
+						<label for="9" class="forms__label">Введите ваш e-mail</label>
+						<input id="9" type="email" placeholder="example@mail.ru">
+					</div>
+					<div class="forms__div">
+						<label class="forms__label">Комментарий</label>
+						<textarea></textarea>
+					</div>
+					<div class="forms__div last">
+						<div class="download__block">
+							<div class="file__upload">
+								Прикрепить план помещения
+								<input id="10" type="file">
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="application__btn btn">ОСТАВИТЬ ЗАЯВКУ</button>
+				</form>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- end Modal modal_form -->
+
+<!-- begin Modal modal__service -->
+<div class="modal fade modal__service" id="modal__service">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="modal__service__text">			
+				<div class="modal-header">
+					<div class="modal-title" id="myModalLabel">Сервисное обслуживание систем кондиционирования</div>
+				</div>
+				<div class="modal-body">
+					Специалисты компании Дифвент проводят:
+					<ul class="list">
+						<li>Комплексное техническое обслуживание систем кондиционирования, вентиляции и холодоснабжения;</li>
+						<li>Обслуживание отдельных систем и оборудования (чиллеры, центральные кондиционеры, приточные установки, фэн-койлы, сплит-системы и т.д.);</li>
+						<li>Электронное тестирование и контроль параметров систем кондиционирования и вентиляции с использованием современных приборов;</li>
+						<li>Комплексные и разовые работы по диагностике и обслуживанию систем кондиционирования, вентиляции и холодоснабжения;</li>
+						<li>Проведение пуско-наладочных работ на вновь смонтированном и/или временно законсервированном оборудовании;</li>
+						<li>Гарантийный и текущий ремонт оборудования;</li>
+						<li>Аварийные выезды, связанные с ремонтом систем кондиционирования, вентиляции, холодоснабжения и автоматики.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal__service_img">
+				<img src="img/modal1.jpg" alt=""/>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal modal__service -->
+
 
 
 
