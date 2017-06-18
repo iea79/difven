@@ -125,7 +125,7 @@ $(document).ready(function() {
     });
 
     $('input[type=tel]').inputmask("+7 ( 999 ) 999 - 99 - 99");
-        
+
     $('a.certificates__link').fancybox({
         'transitionIn'  :   'elastic',
         'transitionOut' :   'elastic',
@@ -133,6 +133,16 @@ $(document).ready(function() {
         'speedIn'       :   600, 
         'speedOut'      :   200, 
         'overlayShow'   :   false
+    });
+
+    $('.menu__btn').on('click', function(event) {
+        event.preventDefault();
+        $('.mobile__menu').addClass('open');
+    });
+
+    $('.nav__close,.nav__link').on('click', function(event) {
+        event.preventDefault();
+        $('.mobile__menu').removeClass('open');
     });
 
 

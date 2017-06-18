@@ -12,15 +12,23 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<!-- Yandex Maps -->
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!-- Стилизованная прокрутка от ДубльГис -->
 	<script type="text/javascript" src="js/baron.min.js"></script>
+	<!-- Bootstrap js -->
 	<script type="text/javascript" src="js/tab.js"></script>
-	<script type="text/javascript" src="js/jquery.inputmask.bundle.js"></script>
-	<script type="text/javascript" src="js/inputmask.extensions.js"></script>
+	<script type="text/javascript" src="js/modal.js"></script>
+	<!-- Fancybox -->
 	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Input mask -->
+	<script type="text/javascript" src="js/jquery.inputmask.bundle.js"></script>
+	<script type="text/javascript" src="js/inputmask.extensions.js"></script>
+	<!-- Slick slider -->
 	<script type="text/javascript" src="js/slick.min.js"></script>
+	<!-- Init plugin and custom js -->
 	<script type="text/javascript" src="js/function.js"></script>
 
 </head>
@@ -71,24 +79,74 @@
 
 			</div>
 
-			<div class="container_center">
+			<!-- begin mobile__menu -->
+			<div class="mobile__menu">
+
+				<div class="nav__close"></div>
+
+				<div class="container_center">
+					
+					<nav class="nav">
+						<div class="nav__title">меню</div>
+						<ul class="nav__bar">
+							<li class="nav__item">
+								<a href="#conditions" class="nav__link">Каталог</a>
+							</li>
+							<li class="nav__item">
+								<a href="#services" class="nav__link">Услуги</a>
+							</li>
+							<li class="nav__item">
+								<a href="#objects" class="nav__link">Объекты</a>
+							</li>
+							<li class="nav__item">
+								<a href="#benefits" class="nav__link">В чем польза</a>
+							</li>
+							<li class="nav__item">
+								<a href="#certificates" class="nav__link">Сертификаты</a>
+							</li>
+							<li class="nav__item">
+								<a href="#job" class="nav__link">Как мы работаем</a>
+							</li>
+							<li class="nav__item">
+								<a href="#contacts" class="nav__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="mobile__menu__form forms">
+						<h2 class="light">Есть проект или идея?! <br>Мы готовы рассчитать стоимость <br>реализации Вашего проекта!</h2>
+						<form action="#" class="forms__application">
+							<div class="forms__div">
+								<label for="7" class="forms__label">Введите ваше имя:</label>
+								<input id="7" type="text" placeholder="Иванов Иван Иванович">
+							</div>
+							<div class="forms__div">
+								<label for="8" class="forms__label">Введите ваш номер</label>
+								<input id="8" type="tel" placeholder="+7 ( ___ ) ___ - __ - __">
+							</div>
+							<div class="forms__div">
+								<label for="9" class="forms__label">Введите ваш e-mail</label>
+								<input id="9" type="email" placeholder="example@mail.ru">
+							</div>
+							<div class="forms__div last">
+								<label for="10" class="forms__label">Прикрепить тех. задание</label>
+								<div class="download__block">
+									<div class="file__upload">
+										Загрузите файл
+										<input id="10" type="file">
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="application__btn btn">ОСТАВИТЬ ЗАЯВКУ</button>
+						</form>
+					</div>
+					
+				</div>
 			
-				<!-- begin navbar  -->
-				<!-- <ul class="navbar ">
-					<li class="navbar__item">
-						<a href="#" class="navbar__link">Item_1</a>
-					</li>
-					<li class="navbar__item">
-						<a href="#" class="navbar__link">Item_2</a>
-					</li>
-					<li class="navbar__item">
-						<a href="#" class="navbar__link">Item_3</a>
-					</li>
-				</ul> -->
-				<!-- end navbar  -->
-				
 			</div>
-		</section><!-- .header-->
+			<!-- end mobile__menu -->
+
+		</section><!-- .first__screen-->
 		<!-- Конец Первого экрана -->
 
 
@@ -580,7 +638,7 @@
 
 
 		<!-- Блок Польза вентиляции -->
-		<section class="benefits">
+		<section id="benefits" class="benefits">
 			<div class="container_center">
 				<h2 class="light">в чем польза вентиляции?</h2>
 				<div class="benefits__info">
@@ -672,7 +730,7 @@
 
 
 		<!-- Блок Наличие сертификатов -->
-		<section class="certificates">
+		<section id="certificates" class="certificates">
 			<div class="container_center">
 				<h2 class="light">наличие дилерских сертификатов</h2>
 				<div class="certificates__list">
@@ -800,7 +858,7 @@
 
 
 		<!-- Блок Карта -->
-		<section class="maps">
+		<section id="contacts" class="maps">
 			<div class="container_center">
 				<div class="maps__address">620085, г. Екатеринбург, ул. 8 Марта 267 г, офис 9</div>
 				<a href="#" class="maps__transit">Схема проезда</a>
@@ -837,6 +895,30 @@
 
 </footer>
 <!-- end footer -->
+
+<!-- Button trigger modal modal_form -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal_form">
+        Посмотреть демо
+      </button>
+
+<!-- begin Modal modal_form -->
+<div class="modal fade modal_form" id="modal_form">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<a href="#" class="modal-close" data-dismiss="modal"></a>
+			<div class="modal-header">
+				<div class="modal-title" id="myModalLabel">Название модали</div>
+			</div>
+			<div class="modal-body">
+				
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end Modal modal_form -->
+
 
 
 </body>
