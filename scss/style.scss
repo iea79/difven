@@ -602,6 +602,7 @@ section {
 		.application__btn {
 			width: 230px;
 			margin-left: 40px;
+			letter-spacing: 4px;
 		}
 		.menu__btn {
 			width: 38px;
@@ -2711,12 +2712,12 @@ section {
 			@extend %clear_a;
 		}
 		.forms__label {
-			font-size: 9px;
+			font-size: 12px;
 		}
 		input[type="text"], 
 		input[type="tel"], 
 		input[type="email"] {
-			font-size: 12px;
+			font-size: 16px;
 			padding: 5px 0;
 			max-width: 333px;
 		}
@@ -2727,7 +2728,7 @@ section {
 		}
 		.download__block {
 			margin: 10px 0 0;
-			font-size: 12px;
+			font-size: 14px;
 			width: 134px;
 			line-height: 30px;
 			height: 33px;
@@ -2738,7 +2739,7 @@ section {
 			float: left;
 			height: 34px;
 			line-height: 37px;
-			font-size: 8px;
+			font-size: 10px;
 			width: 181px;
 			margin-top: 26px;
 		}
@@ -2821,6 +2822,7 @@ section {
 		color: #ffffff;
 		font-family: Intro;
 		text-transform: uppercase;
+		white-space: nowrap;
 		&:before {
 			content: '';
 			display: inline-block;
@@ -2837,6 +2839,11 @@ section {
 				width: 27px;
 				margin-right: 17px;
 			}
+		}
+	}
+	@media (max-width: 960px) {
+		&__link {
+			font-size: 22px;
 		}
 	}
 	@media (max-width: 767px) {
